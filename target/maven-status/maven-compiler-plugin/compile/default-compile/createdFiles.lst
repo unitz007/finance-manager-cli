@@ -1,0 +1,4 @@
+com/charles/finance/cli/Config.class
+com/charles/finance/cli/domain/Transactions.class
+com/charles/finance/cli/commands/TransactionCommands.class
+com/charles/finance/cli/FinanceCliApplication.class
