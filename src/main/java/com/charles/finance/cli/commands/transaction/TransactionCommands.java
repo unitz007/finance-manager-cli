@@ -8,7 +8,7 @@ import picocli.CommandLine;
         TransactionByTypeCommand.class,
         TransactionByDateCommand.class,
         AllTransactionsCommand.class
-}, description = "Command  for querying transactions")
+}, description = "Command for querying transactions")
 public class TransactionCommands implements Runnable {
 
 //    @CommandLine.Parameters(index = "0")
