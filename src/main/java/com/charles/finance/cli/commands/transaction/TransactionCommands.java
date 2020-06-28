@@ -6,7 +6,8 @@ import picocli.CommandLine;
 @CommandLine.Command(name = "transaction", subcommands = {
         TransactionByTypeCommand.class,
         TransactionByDateCommand.class,
-        AllTransactionsCommand.class
+        AllTransactionsCommand.class,
+        TransactionAddCommand.class
 }, description = "Command for querying transactions")
 public class TransactionCommands implements Runnable {
 
