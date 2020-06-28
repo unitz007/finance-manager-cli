@@ -2,8 +2,6 @@ package com.charles.finance.cli.domain;
 
 import lombok.Data;
 
-import java.time.LocalDate;
-
 @Data
 public class Transactions {
 
@@ -16,10 +14,6 @@ public class Transactions {
 
     public String getDate() {
         return date;
-    }
-
-    public Long getId() {
-        return id;
     }
 
     public String getType() {
@@ -36,5 +30,40 @@ public class Transactions {
 
     public String getCategory() {
         return category;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setAmount(Long amount) {
+        this.amount = amount;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "Transactions{" +
+                "type='" + type + '\'' +
+                ", amount=" + amount +
+                ", description='" + description + '\'' +
+                ", category='" + category + '\'' +
+                ", date='" + date + '\'' +
+                '}';
     }
 }
