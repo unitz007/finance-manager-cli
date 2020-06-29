@@ -36,7 +36,7 @@ public class Config {
     }
 
     /**
-     * constructs and displays table for transactions
+     * constructs and displays table for transactions when transactions is not empty
      * @param transactions
      */
     public static void transactionTable(Transactions[] transactions) {
@@ -64,10 +64,18 @@ public class Config {
             data[i][3] = t.getDescription();
             data[i][4] = t.getAmount();
         }
-        TextTable table = new TextTable(columns, data);
-        table.setAddRowNumbering(true);
-        table.printTable();
-        System.out.println();
-        System.out.println("    Total Amount: " + amount_total);
+
+        // checks if transaction is empty or not
+        if (transactions.length == 0) {
+            System.out.println("No transaction(s)");
+        } else {
+            // creates and displays table containing transactions
+            TextTable table = new TextTable(columns, data);
+            table.setAddRowNumbering(true);
+            table.printTable();
+            System.out.println();
+            System.out.println("    Total Amount: " + amount_total);
+        }
+
     }
 }
