@@ -5,10 +5,8 @@
         "https://checkstyle.org/dtds/suppressions_1_0.dtd">
 
 <suppressions>
-    <suppress checks="JavadocStyleCheck"
-              files="GeneratedObject.java"
-              lines="50-9999"/>
-    <suppress checks="MagicNumberCheck"
-              files="LegacyDatasetConvertor.java"
-              lines="221,250-295"/>
+    <suppress checks="MagicNumberCheck" files="Config.java"/>
+    <suppress checks="HideUtilityClassConstructor" files="Config.java"/>
+    <suppress checks="FinalParameters" files="FinanceCliApplication.java, Transactions.javas" />
+    <suppress checks="MissingJavadocMethod" files="Transactions.java"/>
 </suppressions>

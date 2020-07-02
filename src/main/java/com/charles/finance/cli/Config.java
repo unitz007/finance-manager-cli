@@ -1,3 +1,10 @@
+// File: Config.java
+// Created: 2020/07/02
+// Last Changed: 2020/07/02 02:28:41
+// Author: <a href=mailto:charles.dinneya@e4email.net>Dinneya Charles</a>
+
+// This code is copyright (c) ehealth4everyone
+
 package com.charles.finance.cli;
 
 import com.charles.finance.cli.domain.Transactions;
@@ -9,23 +16,24 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 
 /**
- * This class carries global settings and configurations that apply throughout the source code
- * @author Dinneya charles
- * @version 1.0
+ * carries global settings and configurations.
+ * @author <a href=mailto:charles.dinneya@e4email.net>Dinneya Charles</a>.
+ * @version 1.0.0 2020/07/01 22:08:01
  */
 public class Config {
 
     /**
-     * sets the base url
+     * sets the base url.
      * @return String
      */
+    @SuppressWarnings("SameReturnValue")
     public static String baseUrl() {
         return "http://localhost:8000/api";
     }
 
     /**
-     * defines rest templates
-     * sets the properties for rest template
+     * defines rest templates.
+     * sets the properties for rest template.
      * @return RestTemplate
      */
     public static RestTemplate restTemplate() {
@@ -36,10 +44,11 @@ public class Config {
     }
 
     /**
-     * constructs and displays table for transactions when transactions is not empty
-     * @param transactions
+     * constructs and displays table for transactions when transactions is not empty.
+     * @param transactions transactions to display
      */
-    public static void transactionTable(Transactions[] transactions) {
+    @SuppressWarnings("checkstyle:MagicNumber")
+    public static void transactionTable(final Transactions[] transactions) {
 
         String[] columns = {
                 "Date", "Category", "Type", "Description", "Amount [#]"
@@ -47,11 +56,11 @@ public class Config {
 
         int col = columns.length;
         int row = transactions.length;
-        int amount_total = 0;
+        int amountTotal = 0;
 
         // computes the total amount
         for (Transactions t: transactions) {
-            amount_total += t.getAmount();
+            amountTotal += t.getAmount();
         }
 
         Object[][] data = new Object[row][col];
@@ -74,7 +83,7 @@ public class Config {
             table.setAddRowNumbering(true);
             table.printTable();
             System.out.println();
-            System.out.println("    Total Amount: " + amount_total);
+            System.out.println("    Total Amount: " + amountTotal);
         }
 
     }
