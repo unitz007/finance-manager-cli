@@ -1,0 +1,7 @@
+^// File: \b[a-zA-Z0-9]+.java\b
+^// Created: \d\d\d\d/\d\d/\d\d
+^// Last Changed: \d\d\d\d/\d\d/\d\d \d\d:\d\d:\d\d
+^// Author: <a href=\b+mailto:+[a-z.]+@e4email.net\b>([A-Z][a-z]{3,} )([A-Z][a-z]{3,} )?([A-Z][a-z]{3,})</a>
+^$
+^// This code is copyright \(c\) ehealth4everyone
+^$
