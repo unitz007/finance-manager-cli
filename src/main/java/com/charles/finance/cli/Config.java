@@ -28,11 +28,7 @@ public class Config {
      */
     @SuppressWarnings("SameReturnValue")
     public static String baseUrl() {
-<<<<<<< HEAD
         return "https://charles-finance.herokuapp.com/api";
-=======
-        return "http://localhost:8000/api";
->>>>>>> 516b24b50e983531b8cffa04d39d7530f5997375
     }
 
     /**
